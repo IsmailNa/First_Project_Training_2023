@@ -1,6 +1,5 @@
 package com.javacode.day2;
 
-import org.openqa.selenium.devtools.v112.systeminfo.SystemInfo;
 
 public class increment_Decrement_Operator {
 

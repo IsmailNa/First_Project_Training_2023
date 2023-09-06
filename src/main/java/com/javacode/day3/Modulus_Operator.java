@@ -9,6 +9,7 @@ public class Modulus_Operator {
 	   System.out.println(5/2);
 	   System.out.println((float)5/2);
 	   System.out.println(5 % 2);
+	   System.out.println(1.5 % 0.5);    // if it's decimal, the result should be decimal 
 	   
 	   // odd number
 	   System.out.println(11 % 3);
