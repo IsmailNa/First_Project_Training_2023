@@ -1,0 +1,611 @@
+
+James Gosling is th Gootfather of Java. He and his team they invented Java in 1991.
+----------------------------------------------
+
+ Automation Topics
+------------------
+ 🎁 Class 1
+----------
+
+ - Downloading, installation, configuration of Softwares
+
+   1. Download and install Winrar
+  2. Download, install and configure  java 17 "java jdk 17"
+  3. Download and run Eclipse IDE/ IntelliJ IDEA
+  4. Download, install and configure Maven 
+  5. Download and install TestNG
+  6. Download, install and start JENKINS server
+-----------------------------------------------
+  Windows+R --> appwiz.cpl   (uninstall a program)
+-----------------------------------------------
+ 1.
+-----------
+ 2.
+ - Open -- command prompt and type 
+     >java -version 
+ - once you see 'java' is not recognized as a internal or external command,
+ - Download and install "java jdk 17"
+ - once you see (java version "17.0.8" 2023-07-18 LTS)
+ - Type in   >javac
+ - Environment Variables for java configuration
+     - Go to Environment Variables on User variables click New and write JAVA_HOME and past C:\Program Files\Java\jdk-17 then Ok.
+ -----------
+
+ 3. Download and run Eclipse
+
+       - Understand/Workarounds - important areas of Eclipse
+
+   * Step1 : Create a Java Project   ✔
+   * Step2 : Create packages inside the src folder  ✔
+                 - Name -> always start with lower case letters
+                               -> com.nameoftheprojectormodule.fuctionality
+   * Step3 : Create Class(s) inside the packages  ✔
+   * Srep4 : Write your Code inside the Class file
+-----------------------------------------------------------------
+
+  - Java is case sentitive
+  - in case there is a statement you will have to terminate. it is semi-colon (;).
+  - ;  semi-colon is a termination statement in Java and in English full stop
+  - in java you will create a lot of blocks. When there is a block you will not use somi-colon.
+  - The block will have a body. So body will have an enclosure 
+         {
+
+          }
+
+ * " " double quotes  /  '  ' single quotes
+ * 4 types of brackets :
+         - Parentheses or Round Brackets ( )
+         - Square or Box Brackets [ ]
+         - Curly or Braces Brackets { } 
+         - Angle Brackets ⟨ ⟩
+
+  - whatever you see in red color or maroon color those are called predefined keywords in Java.
+-------------------
+
+ - Access modifiers in Java
+
+       * Public
+       * Protected
+       * Default
+       * Private
+----------------------------------------------------------------
+ 🎁 Class 2
+-----------
+
+Java is also language binding
+
+ -  If you want to write Code first you have to add Selenuim library 
+
+ - selenium will only take care of browser automation
+
+    * How to add external libraries ?
+
+       1. Download selenium-java-4.10.0  (https://www.selenium.dev/downloads/)
+       2. Add JAR Files to Eclipse
+            - Step1    : Right click on the Java Project
+            - Step2    : Build Path  > Configure Build Path  > Libraries Tab
+                             You will see ModulePath and ClassPath -> Click on ModulePath > Add External JARs this will take you to file explorer. Go to the folder which has all the jar files. Select all the jar files and add them. Apply and close.
+
+                           -  WebDriver driver = new ChromeDriver(); //Ctrl+Shift+0
+                           -  The platform is ready for Automation coding
+---------   
+         public static void main(String[ ] args) {
+                  System.out.println("Hello World");
+          }
+---------
+         package com.firstprojectjava.day1;
+
+public class Register {
+
+	public static void main(String[ ] args) {
+		System.out.println("I am learning Java");
+       Test1();
+       Test2();
+	}
+    public static void Test1() {
+    	System.out.println("I am learning Python");   
+    	
+    }
+    public static void Test2() {
+    	System.out.println("I am learning .Net"); 
+    }               
+----------
+    
+   public static void main(String[ ] args) {
+
+       WebDriver driver = new ChromeDriver(); //Ctrl+Shift+0
+       driver.manage().window().maximize();
+       driver.get("https://amazon.com");
+    
+    }
+------------------------------------------
+
+  Java project which we create that is only good to write simple Java code if you want to code in other libraries you will not use Java project for that we will use maven Maven is known as a build and compile tool.
+----------------------------------------------------
+
+  4. Download, install and configure Maven
+
+ * Open Command prompt and type >mvn -version
+  
+       'mvn' is not recognized as an internal or external command,
+   - That's means Maven is not in the system
+
+  * Open google and type Download Maven
+        link (apache-maven-3.9.3-bin.zip)
+
+ - To configue it copy the path (C:\Users\Ismail\Desktop\Automation\apache-maven-3.9.3) and paste it in 'User variables' with MAVEN_HOME as a Name and paste (C:\Users\Ismail\Desktop\Automation\apache-maven-3.9.3\bin) in System variables.
+
+  - After configuration go bach to cmd and type >mvn
+----------
+
+ - Create a Maven project
+ 
+  * New Maven project :
+ 
+   Filter : maven-archetype-quickstart   --> and select (version 1.4)  then next
+
+  Group Id : com.learningautomation.project
+  Artifact Id : First_Project_Training  --> It is just a Name of the project -then Finish
+      
+  Y:  : y   (Then hit enter)
+
+  *  Change [JavaSE-1.7] To [JavaSE-17] by right click on JRE System Library 
+
+  * Open pom.xml and update <maven.compiler.source(and target)> to 17 and control S to save
+
+ * We need to add <dependencies>
+
+ - Open   https://mvnrepository.com/  and searsh for "selenium-java" 
+     select org.seleniumhq.selenium » selenium-java then select 4.10.0 the copy 
+(<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.10.0</version>
+</dependency>)
+
+and paste it between row 21 and 22
+
+ * We need to update Maven project
+
+  Right click on the project (Mavenproject) then Maven then Update Project... then  check on the checkbox ⬛ (Force Update of Snapshots/Releases) then Ok
+
+   ✔ Now Maven Project is completely up to date.
+           We have successfully created the project.
+-----------------------------------------
+
+         Now how we write our code ?
+  
+   src/main/jave  --> only to write java code 
+   src/test/java  --> only to write automation code
+------------------------------------------
+
+   - Data Types in Java  ✔
+   - Variables in Java
+   - Operators in Java   ✔
+   - Literals, Keywords, Identifiers in Java
+   - Control Statements in Java 
+   -  Print Statements in Java   ✔ 
+   - Concatenation Statements in Java  ✔
+
+------
+   - String is the only data type in Java which is also a class string is the most powerful class in Java string is also called God of all classes in Java
+-------
+
+  PrintStatements_In_Java
+
+     ( syso + Ctrl + spacebar )
+
+    System.out.println( )  --> ln means new line
+--------
+
+   Concatenation Statements in Java
+ 
+  Exp :       - My Name is : > Name
+                 - My language is : > English
+                 - My country is : Country1 Country2 Country3
+
+       String S1 = " My Name is :";      
+       String S2 = "> Name";
+       System.out.println(S1 + " " + S2);
+-------------
+  
+ 🎁 Operators in java
+ 
+1. Arithmetic Operators:
+
+     - minus or addition
+     + plus or subtraction
+     * multiplication
+     / division
+     % remainder
+     ++ increment operator
+     -- decrement operator
+
+2. Assignment operators
+3. Comparison operators
+
+     ==	Equal to	                                  x == y	
+     !=	Not equal	                                   x != y	
+     >	Greater than	                  x > y	
+     <	Less than	                                   x < y	
+     >=	Greater than or equal to	x >= y	
+     <=	Less than or equal to               x <= y
+
+4. Logical operators
+
+   &&    Logical and   (Returns true if both statements are true)     x < 5 &&  x < 10
+   ||       Logical or    (Logical or	Returns true if one of the statements is true)    x < 5 || x < 4
+   !        Logical not  (Reverse the result, returns false if the result is true)    !(x < 5 && x < 10) 	
+				
+5. Bitwise operators
+----------------------------------------
+ 
+ Start writing Automation Code]
+
+   - MyFirstAutomationCode.java
+
+   public static void main(String[ ] args) {
+		
+	WebDriver driver = new ChromeDriver();     // Ctrl + Shift + O	
+	driver.manage().window().maximize();	
+                driver.get("https://www.costco.com");
+	driver.switchTo().newWindow(WindowType.TAB);
+	driver.get("https://flipkart.com");
+ 
+                driver.switchTo().newWindow(WindowType.WINDOW);
+	driver.get("https://tutorialsninja.com/demo");
+
+       }
+--------------------------------------------
+  3rd Selenium class :
+--------------------
+
+  Download, install and configure java 
+  Download Eclipse
+  Download and configue Maven
+  Create a GitHub account
+  Download Git
+  Configue Git with my username and email
+  Start coding - push the code to the Repo in GitHub
+  Old code - everything will be taken care of including the notes.
+---------------------------------------------
+
+ - For the first time if you want someone's code or anything
+
+   $ git clone https://github.com/pandapiit/PnTMay_Sep_2023_Bach
+---------------------------------------------
+ 
+  Control Statements in Java
+
+      1. Selection or Conditional Statements
+           if, if else, if else if, nested if, switch
+
+      2. Iteration or Looping Statements
+           while, do while, for loop, nested for loop, for each loop
+
+      3. Jump Statements
+           break, continue
+-------------------------------------
+12th classe :  https://get.jenkins.io/war-stable/2.346.1/
+                    https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/WebDriver.html
+---------------------------------------
+
+  Architecture of selenium :
+
+ - 2021 I move to selenium 4 in 2022 early 22 I moved here so you guys should know the architecture of selenium 3 because there is a small difference in architecture of selenium 3 versus architecture of selenium 4 because if in the interview they'll ask you when you move from selenium 3 to 4 what are the changes that you thought you encountered what will you answer you do not know what she is right even though you are coding 4.10 because everything will work on the latest but what if he or she asked you that question how did you transition yourself from 3 to 4 what are the differences that's  you see then you should be in a position to answer this question right because you will go with 5 years of experience 5 years means 2018 2017 right now.
+
+ -  Selenium can be folded in other object oriented programming language such as python .net call PHP JavaScript so many languages can be used with selling but the most the most used and the highest number of jobs are in Java so Java selenium.
+----------------------------------------------------
+ 4th class                 "Selenium.dev"
+---------  
+            
+ - What do we do in Automation Testing ?
+   
+  0. Need to know how the maual Testing works 
+   1. We need our Webpage - html (DOM - document object model) (F12 or right click inspect or (Triple dots -> More tools -> Developer tools)
+           https://rediff.com/
+           https://tutorialsninja.com/demo
+    1.1. Prepare a certain funcionality / a particular flow that you want to test  
+   2. We identify the elements in the webpage which are known as Web Elements
+   3. We need to intract with the WebElements
+      Which action is required for which type of Web Element
+       you can intract with Selenium4 WebElements in almost 16 ways but we will learn 8 which are the most important 
+   -> those 8 are known as Locators
+   4. Assertions/Validations
+      Webpage level - 3 types
+      WebElements level - 3 types
+---------------------------------------------------------------
+DOM :
+
+  <html>
+      <head>..........</head>
+      <body>..........</body>
+  </html>
+-------------------------------------------------------------
+  https://rediff.com/
+     seleniumpanda@rediffmail.com
+     pw : Selenium@123
+
+   https://tutorialsninja.com/demo
+      seleniumpanda@gmail.com
+      pw : Selenium@123 
+------------------------------------------------------------
+https://forum.piit.us/
+-------------------------------------------------------------
+  -This is known as html tag
+         - every webElement has html tage 
+  
+  * Sign in link
+-------------
+<a href="https://mail.rediff.com/cgi-bin/login.cgi" title="Already a user? Sign in" class="signin">Sign in</a>
+  
+   - a is the html tag of Sign in link. All links in a webpage are represented by 'a' tag, 'a' is also called as anchor tag
+-----------------------------
+ 
+ -To identify the elements in the webpage always choose between id, name and class
+
+  Automation flow = click sign in -> enter Username and pw-> click sign in
+------------------------------
+exp:
+  Class = "hidden-xs hidden-sm hidden-md"   -> class with 3 values
+       known sa a compound class
+  driver.findElement(By.class("")).click();  you can not use
+-------------------------------
+  Syntax of Xpath :
+-----------------
+
+   //html[@attribute = 'valueofthatattribute']
+             //input[@class = 'btn btn-primary']
+
+   //html[@attribute1 = 'value1' and @attribute2 = 'value2']
+   //html[@attribute1 = 'value1' or @attribute2 = 'value2']
+   //html[contains(@attribute, 'value')]
+   
+   //html[starts-with(@attribute, 'value')]
+   //html[ends-with(@attribute, 'value')]
+
+Exp :
+----
+    id = "login4321";    6:45
+After refreshing the page
+    id = "login1234";    6:46
+  
+              //div[starts-with(@id = 'login')]
+
+Exp :
+----
+     class = 1234dune_kist;
+     class = 5432dune_kist;
+
+              //input[ends-with(@class = 'dune_kist')] 
+
+
+  Only works for links
+
+    //html[text( ) = 'valueofthetext']
+            //a[text () = 'My Account']
+
+    //html[contains(text( ), 'valueofthetext')]
+            //a[contains(text(), 'My Account')]
+----------------------------------------
+ inachit2021@gmail.com
+ pw : inachit1993
+----------------------------------------
+
+   Advanced Xpath :
+
+     first we have to learn html family tree
+
+  is your parent your ancestor ?  Yes
+  is your grandparent your parent ? No
+  is your grandparent your ancestor ? Yes
+
+  your child is your descendant ? Yes
+  your grandchild is your descendant ? Yes
+  your grandchild is your child ? No
+------------------------------------------
+ parent
+ child                -> input / div ... are children of body
+ ancestor 
+ descendant
+ following-sibling      <body>
+ preceding-sibling     <head>
+ following
+ preceding        (anything on top of it)
+
+------------------------------------------
+  forward slash / means traversing from my great great grandparent to myself
+
+  * means (how many)
+-------------------------------------------
+ write 10 Xpath of Logo (OpenWeather)  https://openweathermap.org/
+ 
+ //li[@class = 'logo']/descendant::img
+ //li[@id = 'hamburger']/preceding::img[1]
+ //ul[@id ='first-level-nav']/descendant::img[1]
+ //div[@id ='desktop-menu']/preceding::img[2]
+ //div[@id = 'banner_android']/following::img[1]
+ //div[@id = 'banner_android']/following-sibling::nav[@id = 'nav-website']/descendant::img[1]
+---------------------------------------------
+
+Xpath is complete
+
+ Locators :
+---------
+ id
+ class
+ name
+ linkText
+ partialLinkText
+ xpath
+ tagname
+ cssSelector
+-------------------------------
+
+ Automating various WebElements
+
+  1. Select Dropdown
+  2. WebTable
+  3. Frames
+  4. Alerts/Pop-ups
+  5. Calendars
+  6. Dynamic Dropdown
+  7. Multiple links and multiple WebElements
+  8. Traking Screenshots
+-----------------------------------
+https://github.com/pandapiit/PnTMay_Sep_2023_Batch
+-----------------------------------
+
+WebTable is another kind of WebElement
+------------------------------------
+
+ //html[@attribute = 'value' ]  -> Xpath basic syntax
+  
+  html[@attribute = value]  -> cssSelector basic syntax
+
+ whenever there is an id attribute
+    html#idvalue
+    imput#idlogin1
+
+ whenever there is a class attribute
+      html.classvalue1
+
+ if it is a compound class
+      html.value(1).value(2).value(n)
+ 
+ <input     class "btn btn-primary"
+       input.btn.btn-primary
+
+ (cssSelector do not go from bottom to top)
+  you can go between siblings but you can not go preceding-sibling
+  you can not jump like Xpath you have to traverse from parent to child
+ (parent to child)
+ (sibling to sibling)
+ between siblings use +
+ parent to child > or a space
+
+  rootelement/keyword::html[1] - xpath
+
+ rootelement > html
+ p#signin_info > a.signin
+
+ supposedly you are traversing fron an ancestor
+ let's say you are traversing from your parent
+ lest's say there are 3 kids of the same html tag
+ 
+ <p
+    <a      
+    <br     
+    <a       
+ 
+  rootelementofparent > nth-child(1)   -> this is ok this will work
+  rootelementofparent > nth-child(2)   -> this is not going to work
+
+  nth-child means child number what
+  
+  
+  
+  p#signin_info > a:nth-child(1)
+  p#signin_info > a:nth-of-type(1) 
+  input#OAS_subsection + div.logobar > div.table > div:nth-child(3) > p#signin_info > a:nth-child(1)
+
+  p#signin_info > br:nth-child(2)
+  p#signin_info > br:nth-of-type(1)
+  p#signin_info a +br
+  p#signin_info a.signin +br 
+  input#OAS_subsection + div.logobar > div.table > div:nth-child(3) > p#signin_info > br:nth-of-type(1)
+
+ p#signin_info > a:nth-child(3)
+ p#signin_info > a:nth-of-type(2) 
+ p#signin_info a +br +a
+ p#signin_info a.signin +br +a
+ input#OAS_subsection + div.logobar > div.table > div:nth-child(3) > p#signin_info > a:nth-child(3)
+ input#OAS_subsection + div.logobar > div.table > div:nth-child(3) > p#signin_info > a:nth-of-type(2)
+----------------------------------------------------------
+
+ https://testng.org
+
+ Only developpers use JUint for Unit Testing
+ Automition Testers use TestNG
+
+ 1. TestNG is a framework
+ 2. TestNG is an execution engine - we do not need the main method
+ 3. TestNG has assertions
+ 4. TestNG has reporting system
+
+ 1st thing - how to configure TestNG in Eclipse
+
+  - Go to https://testng.org -> Download section -> Install from update site -> then copy link address
+  - Go back to Eclipse -> Help -> Install Now Software -> Add (click)
+  
+  - Name : TestNG
+  - Location : https://testng.org/testng-eclipse-update-site
+      -> Click on Add -> Select the checkbox TestNG -> Next -> Accept the agreements -> Finish -> Select the checkbox Always trust all authorities -> then Trust Selected
+
+  - To check that TestNG is successfully installed
+       -> Go to Window -> Show View -> Other -> Expand Java then you will find TestNG.
+
+  Right click on Project -> Properties -> Java Build Path -> Libraries -> Select(highlights) Classpath -> Add Library -> Select TestNG -> Next then Finish -> Select TestNG then Apply and Close
+ 
+ - Add dependency of TestNG
+    - Go to https://mvnrepository.com/ and search for TestNG then click on it -> choose last version (7.8.0) -> copy dependency -> Open prom.xml and paste it
+ 
+ After every action we have to Update the project
+
+   -> Right click on the Project -> Maven -> Update Project -> Select Force Update of Snapshots/Releases -> Ok
+------------------------------------------------
+
+ - Only Main Method has the ability to Execute the code that's why the Main Method is the Execution Engine of Java
+ - Other Methods cannot execute the code
+ -------------------------------------------------
+
+  Create a new Maven Project
+  Add these dependencies below in pom.xml file
+
+  Search : maven-archetype-quickstart and select the 1.4
+
+  artifact id
+  groupid
+
+  y and hit enter
+ 
+  delete the packages which are created by default in 
+        src/main/java
+        src/test/java
+
+   Update the maven project
+   Add TestNG Library too
+---------
+
+  selenium-java
+  testng
+  poi
+  poi-ooxml
+  poi-ooxml-schemas
+  poi-scratchpad
+  poi-excelant
+  jxls-poi  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+

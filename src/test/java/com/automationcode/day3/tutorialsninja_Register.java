@@ -55,10 +55,6 @@ public class tutorialsninja_Register {
 		
 		
 		
-		
-		
-		
-		
 	}
 	
 	
